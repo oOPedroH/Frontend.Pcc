@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Reallé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="white auth-page">
+
+    <!-- Navbar -->
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="../index.html" class="brand-logo">Reallé</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="services.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2 l6 offset-l3">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align gold-text">Registro</span>
+                        <form id="register-form">
+                            <div class="input-field">
+                                <input id="name" type="text" class="validate" required>
+                                <label for="name">Nome Completo</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="password" type="password" class="validate" required>
+                                <label for="password">Senha</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="confirm-password" type="password" class="validate" required>
+                                <label for="confirm-password">Confirme a Senha</label>
+                            </div>
+                            <div class="center-align">
+                                <button type="submit" class="btn waves-effect waves-light white-and-gold">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="login.html" class="gold-text">Já tem uma conta? Faça login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer white-and-gold">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="gold-text">Contato</h5>
+                    <ul>
+                        <li class="gold-text">Telefone: (11) 964225158</li>
+                        <li class="gold-text">E-mail: realleestheticcenter@gmail.com</li>
+                        <li class="gold-text">Endereço: Rua Clovis Soares, 200 - Atibaia, SP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../assets/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="../index.html" class="brand-logo">Reallé</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="services.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Agendamento</h1>
+        <p id="selected-service">Serviço: </p>
+        <form action="/submit_schedule" method="POST" onsubmit="showConfirmation(event)">
+            <div class="input-field">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-field">
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="input-field">
+                <label for="time">Horário</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Agendar</button>
+        </form>
+
+        <!-- Mensagem de confirmação -->
+        <div id="confirmation-message" class="card-panel green white-text" style="display: none; margin-top: 20px;">
+            Agendamento feito com sucesso!
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5>Contato</h5>
+                    <ul>
+                        <li>Telefone: (11) 964225158</li>
+                        <li>E-mail: realleestheticcenter@gmail.com</li>
+                        <li>Endereço: Rua Clovis Soares, 200 - Atibaia, SP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get('service');
+        if (service) {
+            document.getElementById('selected-service').textContent = `Serviço: ${service.replace('-', ' ')}`;
+        }
+
+        function showConfirmation(event) {
+            event.preventDefault(); // Impede o envio do formulário para fins de demonstração
+            document.getElementById('confirmation-message').style.display = 'block';
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
